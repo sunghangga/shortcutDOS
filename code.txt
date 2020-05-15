@@ -1,0 +1,36 @@
+@echo off
+
+set key="jalanyuk"
+
+:while
+set /P command="What do you want? "
+if /I "%command%" EQU %key% (
+
+   D:
+   cd "D:\Documents\project\ggts-bundle\ggts-3.6.4.RELEASE"
+   start GGTS.exe
+
+   cd "D:\Angga"
+   start D:\Angga
+
+   C:
+   cd "C:\Program Files (x86)\Google\Chrome\Application"
+   start chrome.exe
+   start chrome.exe /new-window http://localhost:8080/ERPProject/ https://web.whatsapp.com/
+
+   cd "C:\Program Files\PostgreSQL\9.5\bin"
+   start pgAdmin3.exe
+
+   cd "C:\Program Files\Sublime Text 3"
+   start sublime_text.exe
+
+   exit
+
+) else (
+     
+     echo "I can't give it..."
+     pause
+     cls
+     goto :while
+
+)
